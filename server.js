@@ -8,8 +8,7 @@ app.get('/set', (req,res,next) => {
 });
 
 app.get('/read', (req,res,next) => {
-  const jsonCookie = cookieParser.JSONCookies(req.cookies);
-  res.send(jsonCookie);
+  res.send(req.cookies);
 });
 
 app.get('/clear', (req,res,next) => {
